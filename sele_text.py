@@ -108,6 +108,7 @@ for name in df['names']:
         if dl_list != []:
             for dl in dl_list:
                 url_token = dl.xpath('./a/@href')[0]
+
                 pid_token.append(url_token)
                 f.write('\n'+url_token+',')
             print('本次总采集网页：',pid_token)
