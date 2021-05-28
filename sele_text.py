@@ -40,6 +40,7 @@ df.columns = ['num','names']
 wk = openpyxl.load_workbook(dir_)
 wk_sheet = wk[wk.sheetnames[0]]
 for name in df['names']:
+    name = re.sub('[^a-zA-Z\u4e00-\u9fa5]+', '', name)
     #打印公司名称
     print('公司名称为：',name)
     #打开网页
